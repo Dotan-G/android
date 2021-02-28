@@ -1,0 +1,196 @@
+body {
+	background-color: #303030;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	color: lightgrey;
+	text-shadow: 2px 2px 10px lime;
+	font-size: 2.2em;
+	border-bottom: 2px solid darkgrey;
+	/*text-align: center;*/
+	box-shadow: 4px 4px 5px #888888;
+}
+
+.robots {
+	padding-top: 20px;
+	flex-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	/*animation*/
+	animation-name: lower;
+	animation-duration: 2s; 
+	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes lower {
+	0% {
+		transform: translate(0, -300px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.factory {
+	align-self: center;
+	width: 800px;
+	position: relative;
+	top: -300px;
+	pointer-events: none;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+	transition: all 2s;
+	/*animation*/
+	animation-name: laugh;
+	animation-duration: .5s; 
+	animation-timing-function: ease-in-out; 
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+} 
+
+@keyframes laugh {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -20px);
+  }
+}
+
+.eyes {
+	display: flex;
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+	margin: 0 auto;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+	transform-origin: top center;
+	transition: all 2s;
+	transition-timing-function: ease-in;
+} 
+
+.left_arm:hover {
+	transform: rotate(860deg);
+}
+
+.right_arm { 
+	margin-left: 10px; 
+	transform-origin: top center;
+	transition: all 2s;
+	transition-timing-function: ease-in;
+} 
+
+.right_arm:hover {
+	transform: rotate(-90deg) scale(1.5);
+}
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex;
+	/*animation*/
+	transform-origin: top center;
+	transition: all 1s;
+	transition-timing-function: ease-in;
+} 
+
+.lower_body:hover { 
+	transform: translate(0, -60px);
+}
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+/*.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}*/
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
